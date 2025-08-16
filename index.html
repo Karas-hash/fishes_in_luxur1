@@ -1,47 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html> <!--للتعريف بـHTML5 -->
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>fishes in luxor</title>
+     <link rel="stylesheet" href="style.css"><!-- الربط بـCSS -->
+     <title>fishes in luxor</title> <!--العنوان -->
+    <style>   <!--لفتح CSS داخلي-->
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    .bg-rotator {
+      position: fixed;
+      inset: 0;
+      transition: background 1s ease; /* مدة الانتقال */
+      z-index: -1;
+    }
+    .content {
+      position: relative;
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      font-family: system-ui, sans-serif;
+      color: white;
+      text-align: center;
+      text-shadow: 0 2px 8px rgba(0,0,0,.35);
+    }
+  </style>
 </head>
 <body>
-    <img class="C1" src="image.jpg" alt="" height="250" width="500">
-    <button class="C2"><a href="index1.html">buy now</a></button>
-    <br>
-    <img class="C1" src="image(1).jpg" alt="" height="250" width="500">
-    <button class="C2"><a href="index1.html">buy now</a></button>
-    <br>
-    <img class="C1" src="image(2).jpg" alt="" height="250" width="500">
-    <button class="C2"><a href="index1.html">buy now</a></button>
-    <br>
-    <img class="C1" src="image(3).jpg" alt="" height="250" width="500">
-    <button class="C2"><a href="index1.html">buy now</a></button>
-    <br>
-    <img class="C1" src="image(4).jpg" alt="" height="250" width="500">
-    <button class="C2"><a href="index1.html">buy now</a></button>
-    <br>
-    <img class="C1" src="image(5).webp" alt="" height="250" width="500">
-    <button class="C2"><a href="index1.html">buy now</a></button>
-    <br>
-    <img class="C1" src="image(6).webp" alt="" height="250" width="500">
-    <button class="C2"><a href="index1.html">buy now</a></button>
-    <br>
-    <img class="C1" src="image(7).jpg" alt="" height="250" width="500">
-    <button class="C2"><a href="index1.html">buy now</a></button>
-    <br>
-    <img class="C1" src="image(8).png" alt="" height="250" width="500">
-    <button class="C2"><a href="index1.html">buy now</a></button>
-    <br>
-    <img class="C1" src="image(9).png" alt="" height="250" width="500">
-    <button class="C2"><a href="index1.html">buy now</a></button>
-    <br>
-    <img class="C1" src="image(10).jpg" alt="" height="250" width="500">
-    <button class="C2"><a href="index1.html">buy now</a></button>
-    <br>
-    <img class="C1" src="image(11).jpg" alt="" height="250" width="500">
-    <button class="C2"><a href="index1.html">buy now</a></button>
+     <img class="C1" src="image.jpg" alt="" height="250" width="500">   <!-- الصورة 1 -->
+     <button class="C2"><a href="index1.html">buy now</a></button>   <!--1زر الشراء -->
+    <br>    <!--للنزول سطر واحد-->
+    <img class="C1" src="image(1).jpg" alt="" height="250" width="500">   <!-- الصورة 2 -->
+     <button class="C2"><a href="index1.html">buy now</a></button>   <!--2زر الشراء -->
+    <br>    <!--للنزول سطر واحد-->
+    <img class="C1" src="image(2).jpg" alt="" height="250" width="500">   <!-- الصورة 3 -->
+     <button class="C2"><a href="index1.html">buy now</a></button>   <!--3زر الشراء -->
+    <br>    <!--للنزول سطر واحد-->
+    <img class="C1" src="image(3).jpg" alt="" height="250" width="500">   <!-- الصورة 4 -->
+     <button class="C2"><a href="index1.html">buy now</a></button>   <!--4زر الشراء -->
+    <br>    <!--للنزول سطر واحد-->
+    <img class="C1" src="image(4).jpg" alt="" height="250" width="500">   <!-- الصورة 5 -->
+     <button class="C2"><a href="index1.html">buy now</a></button>   <!--5زر الشراء -->
+    <br>    <!--للنزول سطر واحد-->
+    <img class="C1" src="image(5).webp" alt="" height="250" width="500">   <!-- الصورة 6 -->
+     <button class="C2"><a href="index1.html">buy now</a></button>   <!--6زر الشراء -->
+    <br>    <!--للنزول سطر واحد-->
+    <img class="C1" src="image(6).webp" alt="" height="250" width="500">   <!-- الصورة 7 -->
+     <button class="C2"><a href="index1.html">buy now</a></button>   <!--7زر الشراء -->
+    <br>    <!--للنزول سطر واحد-->
+    <img class="C1" src="image(7).jpg" alt="" height="250" width="500">   <!-- الصورة 8 -->
+     <button class="C2"><a href="index1.html">buy now</a></button>   <!--8زر الشراء -->
+    <br>    <!--للنزول سطر واحد-->
+    <img class="C1" src="image(8).png" alt="" height="250" width="500">   <!-- الصورة 9 -->
+     <button class="C2"><a href="index1.html">buy now</a></button>   <!--9زر الشراء -->
+    <br>    <!--للنزول سطر واحد-->
+    <img class="C1" src="image(9).png" alt="" height="250" width="500">   <!-- الصورة 10 -->
+     <button class="C2"><a href="index1.html">buy now</a></button>   <!--10زر الشراء -->
+    <br>    <!--للنزول سطر واحد-->
+    <img class="C1" src="image(10).jpg" alt="" height="250" width="500">   <!-- الصورة 11 -->
+     <button class="C2"><a href="index1.html">buy now</a></button>   <!--11زر الشراء -->
+    <br>    <!--للنزول سطر واحد-->
+    <img class="C1" src="image(11).jpg" alt="" height="250" width="500">   <!-- الصورة 12 -->
+     <button class="C2"><a href="index1.html">buy now</a></button>   <!--12زر الشراء -->
+     <footer>
     <h6 class="C3"> created by Karas Armia</h6>
     <h6 class="C3"> my phone number: 01229010908</h6>
+    <div id="bg" class="bg-rotator"></div>
+  </footer>
+  <main class="content">
+    <div>
+    </div>
+  </main>
+
+  <script>      // بداية javascript
+    const INTERVAL_MS = 750;        // المدة بين كل تغيير لون (بالمللي ثانية)
+
+    // دالة توليد لون عشوائي بتدرج HSL عشان الألوان تكون ناعمة
+    function randomHSL() {
+      const h = Math.floor(Math.random() * 360);  // توليد درجة لون عشوائية (0-359)
+      const s = 70; // Saturation ثابت
+      const l = 50; // Lightness ثابت
+      return `hsl(${h}, ${s}%, ${l}%)`;
+    }
+
+    const bgEl = document.getElementById("bg");
+
+    function changeBackground() {
+      bgEl.style.background = randomHSL();      // تغيير الخلفية للون جديد
+    }
+
+    changeBackground();     // تغيير أول لون عند فتح الصفحة
+    setInterval(changeBackground, INTERVAL_MS);     // تغيير اللون كل 750 مللي ثانية
+  </script>
 </body>
 </html>

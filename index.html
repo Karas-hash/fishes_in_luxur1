@@ -7,24 +7,24 @@
      <title>fishes in luxor</title> <!--العنوان -->
     <style>   <!--لفتح CSS داخلي-->
     html, body {
-      height: 100%;
+      height: 100%;     /* جعل الصفحة تاخد كامل ارتفاع الشاشة وإلغاء الهوامش */
       margin: 0;
     }
     .bg-rotator {
       position: fixed;
-      inset: 0;
-      transition: background 1s ease; /* مدة الانتقال */
-      z-index: -1;
+      inset: 0;     /* تغطية الشاشة بالكامل (top/right/bottom/left = 0) */
+      transition: background 1s ease;       /* تغيير الخلفية يكون تدريجي خلال ثانية واحدة */
+      z-index: -1;      /* جعله خلف النصوص */
     }
     .content {
       position: relative;
-      min-height: 100%;
-      display: grid;
-      place-items: center;
-      font-family: system-ui, sans-serif;
-      color: white;
-      text-align: center;
-      text-shadow: 0 2px 8px rgba(0,0,0,.35);
+      min-height: 100%;     /* ملء الشاشة */
+      display: grid;      /* استخدام grid لوضع المحتوى في المنتصف */
+      place-items: center;      /* توسيط المحتوى أفقيًا وعموديًا */
+      font-family: system-ui, sans-serif;     /* الخط */
+      color: white;     /* لون النص أبيض */
+      text-align: center;     /* محاذاة النص في الوسط */
+      text-shadow: 0 2px 8px rgba(0,0,0,.35);     /* ظل للنص لزيادة الوضوح */
     }
   </style>
 </head>
@@ -77,15 +77,14 @@
   <script>      // بداية javascript
     const INTERVAL_MS = 750;        // المدة بين كل تغيير لون (بالمللي ثانية)
 
-    // دالة توليد لون عشوائي بتدرج HSL عشان الألوان تكون ناعمة
-    function randomHSL() {
+    function randomHSL() {      // دالة لتوليد لون عشوائي باستخدام HSL
       const h = Math.floor(Math.random() * 360);  // توليد درجة لون عشوائية (0-359)
-      const s = 70; // Saturation ثابت
-      const l = 50; // Lightness ثابت
-      return `hsl(${h}, ${s}%, ${l}%)`;
+      const s = 70;      // نسبة التشبع ثابتة (70%)
+      const l = 50;     // نسبة الإضاءة ثابتة (50%)
+      return `hsl(${h}, ${s}%, ${l}%)`;     // إرجاع اللون بصيغة HSL
     }
 
-    const bgEl = document.getElementById("bg");
+    const bgEl = document.getElementById("bg");     // جلب عنصر الخلفية من HTML
 
     function changeBackground() {
       bgEl.style.background = randomHSL();      // تغيير الخلفية للون جديد
